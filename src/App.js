@@ -10,18 +10,17 @@ import "./App.css";
 import SearchBar from "./components/SearchBar/SearchBarContainer.js"
 import PostsPage from "./components/PostsContainer/PostsPage.js"
 // import dummydata
-import { dummyData } from "./dummy-data.js"
+import dummyData from "./dummy-data.js"
 
 const App = () => {
   // set up state for the dummy data and pass to your PostsPage
-  const [dummyData, setDummyData] = useState(dummyData);
+  const [data, setData] = useState(dummyData);
 
   return (
     <div className="App">
-      /* Add components here and pass props where appropriate */
+      {/* Add components here and pass props where appropriate */}
       <SearchBar/>
-      <PostsPage/>
-      
+      <PostsPage post={data}/>
     </div>
   );
 };
